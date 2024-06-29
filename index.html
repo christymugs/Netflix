@@ -10,204 +10,1002 @@
 </head>
 
 <body>
-  <!-- nav -->
   <div id="nav" class="nav">
-    <img class="nav__logo" src="images/netflix-logo.png" alt="" />
-    <img class="nav__avatar" src="images/netflix-avatar.png" alt="" />
+    <img class="nav__logo" src="images/netflix-logo.png" alt="Netflix Logo" />
+    <img class="nav__avatar" src="images/netflix-avatar.png" alt="Netflix Avatar" />
   </div>
 
-  <!-- header -->
-  <header class="banner">
-    <div class="banner__contents">
-      <h1 class="banner__title">Money Heist</h1>
-      <div class="banner__buttons">
-        <button class="banner__button">Play</button>
-        <button class="banner__button">My List</button>
-      </div>
-      <h1 class="banner__description">
-        To carry out the biggest heist in history, a mysterious man called The Professor recruits
-        a band of eight robbers who have a single characteristic: n...
-      </h1>
+  <img id="back-image" class="back-image" src="images/banner.jpg" alt="Placeholder Image">
+  <video id="back-video" class="back-video" muted plays-inline>
+    <source src="images/banner-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <h1 style="text-transform: uppercase;">Money Heist</h1>
+    <p>To carry out the biggest heist in history, a mysterious man called The Professor recruits
+      a band of eight robbers who have a single characteristic: n...</p>
+    <div class="banner__buttons">
+      <button class="banner__button">Play</button>
+      <button class="banner__button">My List</button>
     </div>
-    <div class="banner--fadeBottom"></div>
-  </header>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const backImage = document.getElementById('back-image');
+      const backVideo = document.getElementById('back-video');
+
+      setTimeout(() => {
+        backImage.style.opacity = '0';
+        setTimeout(() => {
+          backImage.style.display = 'none';
+          backVideo.style.display = 'block';
+          backVideo.style.opacity = '1';
+          backVideo.muted = false;
+          backVideo.play();
+        }, 1000); // matches the transition duration
+      }, 3000);
+
+      backVideo.onended = function () {
+        backVideo.style.opacity = '0';
+        setTimeout(() => {
+          backVideo.style.display = 'none';
+          backImage.style.display = 'block';
+          setTimeout(() => {
+            backImage.style.opacity = '1';
+          }, 10); // delay to ensure the display change takes effect before opacity change
+        }, 1000); // matches the transition duration
+      };
+    }
+  </script>
+
+  <div class="break">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 
   <!-- Netflix Originals -->
   <div class="row">
-    <h2>NETFLIX ORIGINALS</h2>
+    <h2>We Think You'll Love These</h2>
     <div class="row__posters">
-      <img class="row__poster row__posterLarge" src="images/large-movie1.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie2.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie3.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="" />
-
-      <img class="row__poster row__posterLarge" src="images/large-movie8.jpg" alt="" />
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie1.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">3 Seasons</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>History</span>
+              <span>Reality</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie2.jpg" alt="Movie 2">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">98% Match</div>
+            <div class="hover-card-rating">TV-MA</div>
+            <div class="hover-card-episodes">10 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Exciting</span>
+              <span>Thriller</span>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie3.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add other movie items similarly -->
     </div>
   </div>
-
   <!-- Trending Now -->
   <div class="row">
-    <h2>Trending Now</h2>
+    <h2>We Think You'll Love These</h2>
     <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie8.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">3 Seasons</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>History</span>
+              <span>Reality</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie9.jpg" alt="Movie 2">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">98% Match</div>
+            <div class="hover-card-rating">TV-MA</div>
+            <div class="hover-card-episodes">10 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Exciting</span>
+              <span>Thriller</span>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie10.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie11.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie12.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie13.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie14.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add other movie items similarly -->
     </div>
   </div>
-
-  <!-- Top Rated -->
   <div class="row">
-    <h2>Top Rated</h2>
+    <h2>We Think You'll Love These</h2>
     <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">3 Seasons</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>History</span>
+              <span>Reality</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie9.jpg" alt="Movie 2">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">98% Match</div>
+            <div class="hover-card-rating">TV-MA</div>
+            <div class="hover-card-episodes">10 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Exciting</span>
+              <span>Thriller</span>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie11.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie12.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie10.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add other movie items similarly -->
     </div>
   </div>
-
-  <!-- Action Movies -->
   <div class="row">
-    <h2>Action Movies</h2>
+    <h2>We Think You'll Love These</h2>
     <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie1.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">3 Seasons</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>History</span>
+              <span>Reality</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie2.jpg" alt="Movie 2">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">98% Match</div>
+            <div class="hover-card-rating">TV-MA</div>
+            <div class="hover-card-episodes">10 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Exciting</span>
+              <span>Thriller</span>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie3.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add other movie items similarly -->
     </div>
   </div>
-
-  <!-- Comedy Movies -->
   <div class="row">
-    <h2>Comedy Movies</h2>
+    <h2>We Think You'll Love These</h2>
     <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie1.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">3 Seasons</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>History</span>
+              <span>Reality</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie2.jpg" alt="Movie 2">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">98% Match</div>
+            <div class="hover-card-rating">TV-MA</div>
+            <div class="hover-card-episodes">10 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Exciting</span>
+              <span>Thriller</span>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie3.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add other movie items similarly -->
     </div>
   </div>
-
-  <!-- Horror Movies -->
   <div class="row">
-    <h2>Horror Movies</h2>
+    <h2>We Think You'll Love These</h2>
     <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie1.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">3 Seasons</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>History</span>
+              <span>Reality</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie2.jpg" alt="Movie 2">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">98% Match</div>
+            <div class="hover-card-rating">TV-MA</div>
+            <div class="hover-card-episodes">10 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Exciting</span>
+              <span>Thriller</span>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie3.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <div class="row__poster-container">
+        <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="Movie 1">
+        <div class="hover-card">
+          <div class="hover-card-info">
+            <div class="hover-card-match">99% Match</div>
+            <div class="hover-card-rating">TV-14</div>
+            <div class="hover-card-episodes">7 Episodes</div>
+            <div class="hover-card-tags">
+              <span>Captivating</span>
+              <span>Intimate</span>
+              <span>Reality TV</span>
+            </div>
+          </div>
+          <div class="hover-card-buttons">
+            <button class="hover-card-play">Play</button>
+            <button class="hover-card-add">+</button>
+            <button class="hover-card-like">👍</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add other movie items similarly -->
     </div>
   </div>
-
-  <!-- Romance Movies -->
-  <div class="row">
-    <h2>Romance Movies</h2>
-    <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+  <footer>
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Audio Description</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
     </div>
-  </div>
-
-  <!-- Documentaries -->
-  <div class="row">
-    <h2>Documentaries</h2>
-    <div class="row__posters">
-      <img class="row__poster" src="images/small-movie1.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie2.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie3.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie4.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie5.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie6.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie7.jpg" alt="" />
-
-      <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Do not Share</a></li>
+      </ul>
     </div>
-  </div>
-
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Ad Choices</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Corporate Information</a></li>
+      </ul>
+    </div>
+  </footer>
   <script>
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
